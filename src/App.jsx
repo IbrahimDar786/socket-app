@@ -3,7 +3,7 @@ import Button from './components/Button/Button'
 import CountryCapital from './components/CountryCapital'
 import ShowInfo from './components/ShowInfo'
 import TestKnowledge from './components/TestKnowledge'
-import Chat from './pages/Chat/Chat'
+import Chat from './components/Chat/Chat'
 import { useState, createContext, useContext } from 'react'
 
 
@@ -16,11 +16,11 @@ const App = () => {
 
   const [show, setShow] = useState(false);
   const [theme, setTheme] = useState(false);
- 
+
 
   return (
     <div >
-      <ThemeContext value={theme? 'black': 'white'} >
+      <ThemeContext value={theme ? 'black' : 'white'} >
 
 
         <ShowInfo>Info: Click the Show button to display the other interface.</ShowInfo>
@@ -33,7 +33,7 @@ const App = () => {
           </div>
         }
 
-        <Chat onClick={()=>setTheme(!theme)} />
+        <Chat onClick={() => setTheme(!theme)} />
       </ThemeContext>
 
 
