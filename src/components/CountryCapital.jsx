@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import Button from './Button/Button';
 
 const CountryCapital = ({ onContentChange }) => {
     const [next, setNext] = useState(0)
@@ -94,7 +95,7 @@ const CountryCapital = ({ onContentChange }) => {
 
             {/* leftmost item */}
             <div>
-                <button style={btn_style} onClick={onLeftMove}>👈</button> <br /><br />
+                <Button onClick={onLeftMove}>👈</Button>
 
             </div>
 
@@ -105,7 +106,8 @@ const CountryCapital = ({ onContentChange }) => {
                 <p>({`${next}`} of {countries.length})</p>
 
                 {/* <button onClick={showDetails}>Details</button>   */}
-                <button onClick={handleDetails}>Show Details</button>
+                <Button onClick={handleDetails}>Show Details</Button>
+
 
                 <ol style={{ display: `${details ? "block" : "none"}` }} >
                     {
@@ -128,7 +130,8 @@ const CountryCapital = ({ onContentChange }) => {
 
             {/* rightmost item */}
             <div>
-                <button style={btn_style} onClick={onRightMove}>👉</button> <br /><br />
+                <Button onClick={onRightMove}>👉</Button>
+
 
             </div>
 

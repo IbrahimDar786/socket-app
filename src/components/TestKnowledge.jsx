@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { questions } from '../../data/staticQuestions'
+import Button from "./Button/Button";
 
 const TestKnowledge = ({ handleLeftMove, rightHandler }) => {
 
@@ -31,7 +32,7 @@ const TestKnowledge = ({ handleLeftMove, rightHandler }) => {
 
         <div style={container_style}>
             {/* Left Arrow */}
-            <button onClick={handleLeftMove}>←</button>
+            <Button onClick={handleLeftMove}>←</Button>
 
             {/* Question Container */}
             <div >
@@ -57,9 +58,9 @@ const TestKnowledge = ({ handleLeftMove, rightHandler }) => {
                     </div>
 
                     {/* Answer */}
-                    <button onClick={() => setShowAnswer(!showAnswer)}>
+                    <Button onClick={() => setShowAnswer(!showAnswer)}>
                         Show Answer
-                    </button>
+                    </Button>
 
                     {showAnswer &&
                         <p style={{ color: "green", fontSize: "1.5rem" }}>{questions.at(next).answer}</p>
@@ -73,7 +74,7 @@ const TestKnowledge = ({ handleLeftMove, rightHandler }) => {
             </div>
 
             {/* Right Arrow */}
-            <button onClick={handleRightMove}>→</button>
+            <Button onClick={handleRightMove}>→</Button>
         </div >
 
     );
