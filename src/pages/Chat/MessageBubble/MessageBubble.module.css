@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.incoming {
+    justify-content: flex-start;
+}
+
+.outgoing {
+    justify-content: flex-end;
+}
+
+.bubble {
+    max-width: 65%;
+    padding: 10px 14px;
+    border-radius: 12px;
+}
+
+.incoming .bubble {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-top-left-radius: 4px;
+}
+
+.outgoing .bubble {
+    background: #2563eb;
+    color: #ffffff;
+    border-top-right-radius: 4px;
+}
+
+.message {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.time {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+    opacity: 0.65;
+    text-align: right;
+}
